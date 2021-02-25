@@ -50,19 +50,8 @@ class TwigToHtml {
           loader: "html-loader",
           options: assign(
             {
-              minify: mix.inProduction(),
-              attrs: [
-                ":srcset",
-                "img:src",
-                "audio:src",
-                "video:src",
-                "video:poster",
-                "track:src",
-                "embed:src",
-                "source:src",
-                "input:src",
-                "object:data"
-              ]
+              minimize: mix.inProduction(),
+              sources: false
             },
             this.config.htmlOptions
           )
